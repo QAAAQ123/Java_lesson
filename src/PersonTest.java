@@ -15,22 +15,5 @@ public class PersonTest {
         System.out.println(p2.address);
         System.out.println(p2.isVip+"\n");
 
-        System.out.println(p1.name);
-        System.out.println(p2.name);
-        System.out.println(p1.count);
-        System.out.println(p2.count);
-        p1.count++;
-        System.out.println(p1.count);
-        System.out.println(p2.count);
-        p2.count++;
-        System.out.println(p1.count);
-        System.out.println(p2.count);
-
-        p1.printName();
-        p1.printCount();
-
-        Person.count++;
-        p1.printCount();
-
     }
 }
