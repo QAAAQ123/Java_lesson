@@ -1,6 +1,4 @@
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Iterator;
+import java.util.*;
 public class SetExam2 {
     public static void main(String args[]){
         Set<MyData> mySet = new HashSet<>();
@@ -36,5 +34,16 @@ class MyData{
 
     public String toString(){
         return "MyData{" + "name= " + name + '\'' + ", vlaue= " + value + '}';
+    }
+
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass())return false;
+        MyData myData = (MyData) o;
+        return value == myData.value && Object.equals(name,myData.name);
+    }
+
+    public int hashCode(){
+        return Object.hash(name,value);
     }
 }
